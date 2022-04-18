@@ -34,13 +34,41 @@
     },
     {
         "id": 4,
-        "service_title": "SUPER SAVER 4",
-        "service_price": "TK.30,000/=",
-        "service1": "1 Senior Photographer + 1 Top Photographer + 1 Top Associate Photographer",
-        "service2": "Event Duration: 4 Hours",
-        "service3": "Number of Pictures: Unlimited (All post processed)",
-        "service4": "Specially Edited Photos: 100 copies",
-        "service5": "Print: 4R (4”x6″) Matte Prints: 100 copies",
-        "service6": "* All soft copy of photos will be delivered in Dream Weavers Signature Pen drive"
+        "service_title": "STANDARD 1",
+        "service_price": "TK.15, 000/=",
+        "service1": "1 Top Cinematographer",
+        "service2": "1 Camera Unit",
+        "service3": "Video Quality: 1080P (1920×1080)",
+        "service4": "Lighting setup",
+        "service5": "Event Duration: 5 hours",
+        "service6": "* 2-3 minutes Promo with the best moments of the event",
+        "service7": "* 25 mins + edited video from entire event",
+        "service8": "* Post Processing by Our Top Editor."
+    },
+    {
+        "id": 5,
+        "service_title": "STANDARD 2",
+        "service_price": "TK.25, 000/=",
+        "service1": "1 Top Cinematographer + 1 Top Associate Cinematographer",
+        "service2": "2 Camera Unit",
+        "service3": "Video Quality: 1080P (1920×1080)",
+        "service4": "Lighting setup",
+        "service5": "Event Duration: 5 hours",
+        "service6": "* 2-3 minutes Promo with the best moments of the event",
+        "service7": "* 25 mins + edited video from entire event",
+        "service8": "* Post Processing by Our Top Editor."
+    },
+    {
+        "id": 6,
+        "service_title": "STANDARD 3",
+        "service_price": "TK.35,000/=",
+        "service1": "2 Top Cinematographers + 1 Top Associate Cinematographer",
+        "service2": "3 Camera Unit",
+        "service3": "Video Quality: 1080P (1920×1080)",
+        "service4": "Lighting setup",
+        "service5": "Event Duration: 5 hours",
+        "service6": "* 2-3 minutes Promo with the best moments of the event",
+        "service7": "* 30 mins + edited video from entire event",
+        "service8": "* Post Processing by Our Top Editor."
     }
 ]
