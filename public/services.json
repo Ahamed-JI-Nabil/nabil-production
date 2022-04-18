@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "service_title": "SUPER SAVER 1",
+        "service_price": "TK.12,500/=",
+        "service1": "1 Top Photographer",
+        "service2": "Event Duration: 4 Hours",
+        "service3": "Number of Pictures: Unlimited (All post processed)",
+        "service4": "Specially Edited Photos: 100 copies",
+        "service5": "Print: 4R (4”x6″) Matte Prints: 100 copies",
+        "service6": "* All soft copy of photos will be delivered in Dream Weavers Signature Pen drive"
+    },
+    {
+        "id": 2,
+        "service_title": "SUPER SAVER 2",
+        "service_price": "TK.15,000/=",
+        "service1": "1 Top Photographer + 1 Top Associate Photographer.",
+        "service2": "Event Duration: 4 Hours",
+        "service3": "Number of Pictures: Unlimited (All post processed)",
+        "service4": "Specially Edited Photos: 100 copies",
+        "service5": "Print: 4R (4”x6″) Matte Prints: 100 copies",
+        "service6": "* All soft copy of photos will be delivered in Dream Weavers Signature Pen drive"
+    },
+    {
+        "id": 3,
+        "service_title": "SUPER SAVER 3",
+        "service_price": "TK.20,000/=",
+        "service1": "1 Senior Photographer + 1 Top Associate Photographer.",
+        "service2": "Event Duration: 4 Hours",
+        "service3": "Number of Pictures: Unlimited (All post processed)",
+        "service4": "Specially Edited Photos: 100 copies",
+        "service5": "Print: 4R (4”x6″) Matte Prints: 100 copies",
+        "service6": "* All soft copy of photos will be delivered in Dream Weavers Signature Pen drive"
+    },
+    {
+        "id": 4,
+        "service_title": "SUPER SAVER 4",
+        "service_price": "TK.30,000/=",
+        "service1": "1 Senior Photographer + 1 Top Photographer + 1 Top Associate Photographer",
+        "service2": "Event Duration: 4 Hours",
+        "service3": "Number of Pictures: Unlimited (All post processed)",
+        "service4": "Specially Edited Photos: 100 copies",
+        "service5": "Print: 4R (4”x6″) Matte Prints: 100 copies",
+        "service6": "* All soft copy of photos will be delivered in Dream Weavers Signature Pen drive"
+    }
+]
