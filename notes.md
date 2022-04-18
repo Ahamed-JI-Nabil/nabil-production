@@ -14,4 +14,4 @@ add footer
 
 working navbar
 
-
+responsive home page

@@ -1,8 +1,19 @@
 import React from 'react';
 import { Container, Nav, Navbar, } from 'react-bootstrap';
+import { useAuthState, } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import CustomLink from '../../Login/CustomLink/CustomLink';
 
 const Header = () => {
+
+    const [user, loading, error] = useAuthState(auth);
+
+    const handleSignOut = () => {
+        signOut(auth)
+    }
+
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -11,10 +22,11 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/packages">Packages</Nav.Link>
-                            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-                            <Nav.Link as={Link} to="/login">LogIn</Nav.Link>
+                            <Nav.Link as={CustomLink} to="/home">Home</Nav.Link>
+                            <Nav.Link as={CustomLink} to="/packages">Packages</Nav.Link>
+                            <Nav.Link as={CustomLink} to="/contact">CheckOut</Nav.Link>
+                            {user ? <Nav.Link onClick={handleSignOut}>SignOut</Nav.Link>
+                                : <Nav.Link as={CustomLink} to="/login">LogIn</Nav.Link>}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
