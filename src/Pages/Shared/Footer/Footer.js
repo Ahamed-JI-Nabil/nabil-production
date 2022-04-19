@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className="bg-dark text-center text-white w-100">
-            <div className="container p-4 pb-0">
+            <div className="container p-4 pb-0 ">
                 <section className="my-4">
                     <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><img className='me-2' style={{ height: '30px', cursor: 'pointer' }} src={facebook} alt="" /></a>
                     <a href="http://google.com" target="_blank" rel="noopener noreferrer"><img className='me-2' style={{ height: '30px', cursor: 'pointer' }} src={google} alt="" /></a>
