@@ -5,10 +5,10 @@ Live Site: [Nabil Production](https://nabil-production.web.app)
 
 # Features 
 
-* Use can SingUp with email and password or google or github.
+* User can SignIn and SingUp with email and password or google or github.
 * It contains Active route Navbar
 * Responsive home page.
-* Protected Route.
+* Protected Route etc.
 
 
 # Technology Used
@@ -17,7 +17,6 @@ Live Site: [Nabil Production](https://nabil-production.web.app)
 * React Router
 * Firebase
 * React Firebase Hooks
-* 
 
 
 I
