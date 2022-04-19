@@ -1,14 +1,21 @@
 import React from 'react';
-import { Card, ListGroup, ListGroupItem, } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Button, Card, ListGroup, ListGroupItem, } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Service = ({ service }) => {
 
-    const { service_title, service_price } = service
+    const { id, service_title, service_price } = service
+
+    const navigate = useNavigate()
+
+
+    const handleBooking = id =>{
+        navigate('/checkout')
+    }
 
     return (
         <div className=' mt-5 col-lg-3 col-sm-12 row justify-content-center'>
-            <Card className='w-100 shadow'>
+            <Card className='shadow'>
                 <Card.Body className='text-center'>
                     <Card.Text>{service_title}</Card.Text>
                     <Card.Title>
@@ -24,7 +31,7 @@ const Service = ({ service }) => {
                     <ListGroupItem className='fw-light'>{service.service6}</ListGroupItem>
                 </ListGroup>
                 <Card.Body className='row'>
-                    <Link to='/contact' className='btn btn-dark my-2 col align-self-end'>Book Now</Link>
+                    <Button  onClick={()=> handleBooking(id)}  className='btn btn-dark my-2 col align-self-end'>Book Now</Button>
                 </Card.Body>
             </Card>
         </div>

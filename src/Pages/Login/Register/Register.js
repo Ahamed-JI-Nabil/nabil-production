@@ -1,10 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useMatch, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -19,6 +21,9 @@ const Register = () => {
     let location = useLocation();
 
     let from = location.state?.from?.pathname || "/";
+
+    const [agree, setAgree] = useState(false)
+
 
     const nameRef = useRef('')
     const emailRef = useRef('')
@@ -37,6 +42,9 @@ const Register = () => {
     if (user) {
         navigate(from, { replace: true });
     }
+    if (error) {
+        toast("Could't Create An Account. Please Try Again.")
+    }
     if (loading) {
         return <Loading></Loading>
     }
@@ -54,24 +62,24 @@ const Register = () => {
             <p className='text-center '>or:</p>
             <Form className='container' onSubmit={handleSubmitRegister}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control ref={nameRef} type="text" placeholder="Name" />
+                    <Form.Control ref={nameRef} required type="text" placeholder="Name" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control ref={emailRef} type="email" placeholder="Email" />
+                    <Form.Control ref={emailRef} required type="email" placeholder="Email" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" />
+                    <Form.Control ref={passwordRef} required type="password" placeholder="Password" />
                 </Form.Group>
-                <Form.Group className="my-3 d-flex justify-content-around" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Accept Nabil Production Terms and Condition" />
+                <Form.Group onClick={() => setAgree(!agree)} className="my-3 d-flex justify-content-around" controlId="formBasicCheckbox">
+                    <Form.Check className={agree ? '' : 'text-danger'} type="checkbox" label="Accept Nabil Production Terms and Condition" />
                 </Form.Group>
-                <Button className='w-100 mx-auto mt-3' variant="dark" type="submit">
+                <Button disabled={!agree} className='w-100 mx-auto mt-3' variant="dark" type="submit">
                     Register
                 </Button>
                 <p className="my-4 text-center ">Already a member? <Link className='text-decoration-none' to='/login'>LogIn</Link></p>
-
             </Form>
+            <ToastContainer />
         </div>
     );
 };

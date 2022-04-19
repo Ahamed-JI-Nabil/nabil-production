@@ -15,7 +15,7 @@ const Header = () => {
     }
 
     return (
-        <div>
+        <header>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/home">Nabil Production</Navbar.Brand>
@@ -24,6 +24,7 @@ const Header = () => {
                         <Nav className="ms-auto">
                             <Nav.Link as={CustomLink} to="/home">Home</Nav.Link>
                             <Nav.Link as={CustomLink} to="/packages">Packages</Nav.Link>
+                            <Nav.Link as={CustomLink} to="/blogs">Blogs</Nav.Link>
                             <Nav.Link as={CustomLink} to="/checkout">CheckOut</Nav.Link>
                             {user ? <Nav.Link onClick={handleSignOut}>SignOut</Nav.Link>
                                 : <Nav.Link as={CustomLink} to="/login">LogIn</Nav.Link>}
@@ -31,7 +32,7 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </div>
+        </header>
     );
 };
 

@@ -5,6 +5,8 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -43,7 +45,7 @@ const Login = () => {
     }
 
     if (error) {
-        console.log(error.message);
+        toast('Could Not LogIn To Your Account. Please try Again!')
     }
 
     if (loading) {
@@ -51,7 +53,7 @@ const Login = () => {
     }
 
 
-
+    console.log(error);
 
 
     return (
@@ -72,7 +74,7 @@ const Login = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" />
                 </Form.Group>
                 <Form.Group className="my-3 d-flex justify-content-around" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
+                    <Form.Check type="checkbox" label="Remember Me" />
                     <Link className='text-decoration-none' to='/'>Forget Password?</Link>
                 </Form.Group>
                 <Button className='w-100 mx-auto mt-3' variant="dark" type="submit">
@@ -81,6 +83,7 @@ const Login = () => {
                 <p className="my-4 text-center ">Not a member? <Link className='text-decoration-none' to='/register'>Register</Link></p>
 
             </Form>
+            <ToastContainer />
         </div>
     );
 };
