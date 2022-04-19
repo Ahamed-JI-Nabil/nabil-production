@@ -4,7 +4,6 @@ import google from '../../../Images/icons/google.png'
 import github from '../../../Images/icons/github.png'
 import instagram from '../../../Images/icons/instagram.png'
 import twitter from '../../../Images/icons/twitter.png'
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
