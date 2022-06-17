@@ -16,7 +16,8 @@ Live Site: [Nabil Production](https://nabil-production.web.app)
 * React Bootstrap
 * React Router
 * Firebase
-* React Hook Form
+* React Firebase Hooks
+* React Toastify
 
 
 I
